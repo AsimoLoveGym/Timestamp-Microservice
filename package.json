@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/AsimoLoveGym/Timestamp-Microservice/issues"
   },
-  "homepage": "https://github.com/AsimoLoveGym/Timestamp-Microservice#readme"
+  "homepage": "https://github.com/AsimoLoveGym/Timestamp-Microservice#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0"
+  }
 }
