@@ -29,16 +29,16 @@ app.get('/*', function (req, res) {
     var date = new Date(unixNum);
     trimedNaturalDate = dateFormat(date, 'longDate');
     outPutJson = {
-      "unix": unixNum,
-      "natural": trimedNaturalDate
-    }
+      unix: unixNum,
+      natural: trimedNaturalDate,
+    };
   } else if (Date.parse(trimedQueryString)) {
     // Input case 2: natural format, special format should match.
     unixNum = Date.parse(trimedQueryString);
     outPutJson = {
-      "unix": unixNum,
-      "natural": trimedQueryString
-    }
+      unix: unixNum,
+      natural: trimedQueryString,
+    };
   }
 
   res.json(outPutJson);
@@ -58,5 +58,5 @@ app.use(function (err, req, res, next) {
 });
 
 app.listen(app.get('port'), function () {
-  console.log('Express started on http://localhost:' + app.get('port') + '; press Ctrl-c to terminate.');
+  // console.log('Express started on http://localhost:' + app.get('port') + '; press Ctrl-c to terminate.');
 });
